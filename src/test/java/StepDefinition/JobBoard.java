@@ -65,10 +65,8 @@ public class JobBoard {
 
 	@Then("^Fill in the necessary details and submit the form$")
 	public void fill_in_the_necessary_details() throws Throwable {
-		driver.findElement(By.id("user_login")).sendKeys("BDDUser1");
-		driver.findElement(By.id("email")).sendKeys("BDDUser1@ibm.com");
-		driver.findElement(By.id("first_name")).sendKeys("BDDVorname123");
-		driver.findElement(By.id("last_name")).sendKeys("BDDName_teil_123");
+		driver.findElement(By.id("user_login")).sendKeys("BDDUsertest3");
+		driver.findElement(By.id("email")).sendKeys("BDDUsertest3@ibm.com");
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.findElement(By.id("createusersub")).submit();
 	}
@@ -76,7 +74,7 @@ public class JobBoard {
 	@And("^Verify that the user was created$")
 	public void verify_that_the_user_was_created() throws Throwable {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.findElement(By.id("user-search-input")).sendKeys("BDDUser1@ibm.com");
+		driver.findElement(By.id("user-search-input")).sendKeys("BDDUsertest3@ibm.com");
 		
 		driver.findElement(By.id("search-submit")).click();
 
@@ -167,7 +165,7 @@ public class JobBoard {
 
 		buttonSubmit.click();
 
-		driver.findElement(By.id("job_preview_submit_button")).submit();
+		driver.findElement(By.id("job_preview_submit_button")).click();
 
 		
 	}

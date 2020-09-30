@@ -15,7 +15,7 @@ import cucumber.api.junit.Cucumber;
 	
     glue = {"StepDefinition"},
 	
-    tags = {"@jobBoard, @sugarCRM, @OrangeHRM"},
+    tags = {"@jobBoard"},
 	//tags = {"@test"},
     strict = true,
     plugin = {"pretty", "html: test-reports"},

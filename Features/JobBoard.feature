@@ -23,7 +23,7 @@ Feature: Verify the Job Board page.
    Scenario: Posting a job using parameterization
     Given Open a browser with Jobs Site
     Then Go to Post a Job page
-    And Enter "Cucumber/BDD Tester6", "kuehkopf-knoblochsaue" and "GoodGames GmbH"
+    And Enter "Cucumber/BDD Tester", "kuehkopf-knoblochsaue" and "GoodGames GmbH"
     And Submit the form
     Then Go to the Jobs page
     And Confirm "Cucumber/BDD Tester" listing is shown on page
