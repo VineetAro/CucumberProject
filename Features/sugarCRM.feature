@@ -15,21 +15,21 @@ Feature: Verify different functionalities in CRM Application
 
     Examples: 
       |salutation| fName  | lName  		| phone |
-      | 	 Mr.   | Max  | Mustermann| 999999|
-      |    Mrs.  | Silke   | Musterfrau| 88889 |
+      | 	 Mr.   | Maxx  | Mustermann| 999999|
+      |    Mrs.  | Silkee   | Musterfrau| 88889 |
 
 
  Scenario Outline: Schedule a meeting and invite members
   Given Application is open and user is logged in
     Then Navigate to the Activities
-    And Create new meeting record "<subject>", "<sDate>", "<description>"
+    And Create new meeting record "<subject>", "<sDate>", "<description>", "<invitee1>", "<invitee2>", "<invitee3>"
     And Verify the meeting in View meetings record "<subject>", "<sDate>", "<description>"
     And Close the CRM browser
  
  Examples: 
-      | subject  				 | sDate 					| description |
-      | name1_10/26/2020 |     10/26/2020 | Meeting_1 |
-      | name2_10/21/2020 |     10/21/2020 | Meeting_2 |
+      | subject  				 | sDate 					| description | invitee1 | invitee2 |invitee3 |
+      | name1_10/27/2020 |     10/27/2020 | Meeting_1 	|	Silke			|	sil				|Mustermann|
+      | name2_10/22/2020 |     10/22/2020 | Meeting_2 	| Max			  |	Til				|Mustermann|
      
   Scenario Outline: Create a Product
   Given Application is open and user is logged in

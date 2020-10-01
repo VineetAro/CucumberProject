@@ -95,18 +95,15 @@ public class SugarCrm {
 	@Then("^Verify the record \"(.*)\", \"(.*)\", \"(.*)\", \"(.*)\"$")
 	public void verify_the_record(String Salutation, String Firstname, String Lastname, String Phone) throws Throwable {
 		navigate_to_the_lead();
-		
-		/**
-		driver.findElement(By.cssSelector("ul.listViewLinkButton_top:nth-child(5) > li:nth-child(1) > a:nth-child(1)"))
-				.click();
-		driver.switchTo();
-		driver.findElement(By.xpath("//*[@id='searchDialog']/div/div/div[1]/ul/li[2]")).click();
 
-		WebElement fName = driver.findElement(By.id("first_name_advanced"));
-		fName.clear();
-		fName.sendKeys(Firstname);
-		fName.sendKeys(Keys.ENTER);
-		**/
+		/**
+		 * driver.findElement(By.cssSelector("ul.listViewLinkButton_top:nth-child(5) >
+		 * li:nth-child(1) > a:nth-child(1)")) .click(); driver.switchTo();
+		 * driver.findElement(By.xpath("//*[@id='searchDialog']/div/div/div[1]/ul/li[2]")).click();
+		 * 
+		 * WebElement fName = driver.findElement(By.id("first_name_advanced"));
+		 * fName.clear(); fName.sendKeys(Firstname); fName.sendKeys(Keys.ENTER);
+		 **/
 		// Verify records
 		List<WebElement> leads = driver
 				.findElements(By.xpath("/html/body/div[4]/div/div[3]/form[2]/div[3]/table/tbody/tr/td[3]/b/a"));
@@ -131,8 +128,9 @@ public class SugarCrm {
 		action.moveToElement(driver.findElement(By.id("moduleTab_9_Meetings"))).click().perform();
 	}
 
-	@Then("^Create new meeting record \"(.*)\", \"(.*)\", \"(.*)\"$")
-	public void create_new_meeting_record(String subject, String sDate, String desc) throws Throwable {
+	@Then("^Create new meeting record \"(.*)\", \"(.*)\", \"(.*)\", \"(.*)\", \"(.*)\", \"(.*)\"$")
+	public void create_new_meeting_record(String subject, String sDate, String desc, String invitee1, String invitee2,
+			String invitee3) throws Throwable {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		action = new Actions(driver);
 		WebElement nMeeting = driver.findElement(By.xpath("/html/body/div[3]/nav/div/div[2]/ul/li[2]/span[2]/a"));
@@ -153,15 +151,35 @@ public class SugarCrm {
 		WebElement Element = driver.findElement(By.id("description"));
 		js.executeScript("arguments[0].scrollIntoView();", Element);
 		Element.sendKeys(desc);
-		
-		Element.sendKeys(Keys.chord(Keys.ALT+"a"));
-	
-		
+
+		// Add Participants
+
+		WebElement participant = driver.findElement(By.id("search_first_name"));
+		js.executeScript("arguments[0].scrollIntoView();", participant);
+
+		// invite 1
+		participant.sendKeys(invitee1);
+		driver.findElement(By.id("invitees_search")).submit();
+		driver.findElement(By.id("invitees_add_1")).click();
+
+		// invite 2
+		participant.clear();
+		participant.sendKeys(invitee2);
+		driver.findElement(By.id("invitees_search")).submit();
+		driver.findElement(By.id("invitees_add_1")).click();
+		// invite 3
+		participant.clear();
+		participant.sendKeys(invitee3);
+		driver.findElement(By.id("invitees_search")).submit();
+		driver.findElement(By.id("invitees_add_1")).click();
+
+		Element.sendKeys(Keys.chord(Keys.ALT + "a"));
+
 	}
 
 	@Then("^Verify the meeting in View meetings record \"(.*)\", \"(.*)\", \"(.*)\"$")
 	public void verify_the_meeting_in_View_meetings(String subject, String sDate, String desc) throws Throwable {
-		//Navigate to View Meetings
+		// Navigate to View Meetings
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		action = new Actions(driver);
 		WebElement nMeeting = driver.findElement(By.xpath("/html/body/div[2]/nav/div/div[2]/ul/li[2]/span[2]/a"));
@@ -170,18 +188,17 @@ public class SugarCrm {
 
 		action.moveToElement(driver.findElement(By.partialLinkText("View Meetings"))).click().perform();
 		/**
-		// Verfiy the meeting
-		driver.findElement(By.cssSelector("#pagination > td > table > tbody > tr > td:nth-child(1) > ul.clickMenu.selectmenu.searchLink.SugarActionMenu.listViewLinkButton.listViewLinkButton_top > li > a"))
-		.click();
-		driver.switchTo();
-		driver.findElement(By.cssSelector("#searchDialog > div > div > div.modal-header > ul > li.searchTabHandler.basic.active")).click();
-		WebElement fName = driver.findElement(By.id("name_basic"));
-		fName.clear();
-		fName.sendKeys(subject);
-		fName.sendKeys(Keys.ENTER);
-**/
+		 * // Verfiy the meeting driver.findElement(By.cssSelector("#pagination > td >
+		 * table > tbody > tr > td:nth-child(1) >
+		 * ul.clickMenu.selectmenu.searchLink.SugarActionMenu.listViewLinkButton.listViewLinkButton_top
+		 * > li > a")) .click(); driver.switchTo();
+		 * driver.findElement(By.cssSelector("#searchDialog > div > div >
+		 * div.modal-header > ul > li.searchTabHandler.basic.active")).click();
+		 * WebElement fName = driver.findElement(By.id("name_basic")); fName.clear();
+		 * fName.sendKeys(subject); fName.sendKeys(Keys.ENTER);
+		 **/
 		// Assess returned val
-		
+
 		List<WebElement> meetings = driver
 				.findElements(By.xpath("/html/body/div[2]/div[1]/div/div[3]/form[2]/div[3]/table/tbody/tr/td[4]"));
 		for (WebElement meeting : meetings) {
@@ -230,28 +247,24 @@ public class SugarCrm {
 
 	@Then("^Verify the View products record \"(.*)\", \"(.*)\", \"(.*)\"$")
 	public void verify_the_View_products(String pName, String pNum, String pPrice) throws Throwable {
-		
-		//navigate to View Products
-		    	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-				action = new Actions(driver);
-				WebElement nProd = driver.findElement(By.xpath("/html/body/div[2]/nav/div/div[2]/ul/li[2]/span[2]/a"));
-				action.moveToElement(nProd).build().perform();
-				wait.until(ExpectedConditions.visibilityOf(nProd));
 
-				action.moveToElement(driver.findElement(By.partialLinkText("View Products"))).click().perform();
+		// navigate to View Products
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		action = new Actions(driver);
+		WebElement nProd = driver.findElement(By.xpath("/html/body/div[2]/nav/div/div[2]/ul/li[2]/span[2]/a"));
+		action.moveToElement(nProd).build().perform();
+		wait.until(ExpectedConditions.visibilityOf(nProd));
 
+		action.moveToElement(driver.findElement(By.partialLinkText("View Products"))).click().perform();
 
-		//Verify Products
+		// Verify Products
 		/**
-		driver.findElement(By.cssSelector("ul.listViewLinkButton_top:nth-child(4) > li:nth-child(1) > a:nth-child(1)"))
-				.click();
-		driver.switchTo();
-		driver.findElement(By.cssSelector("li.searchTabHandler:nth-child(1)")).click();
-		WebElement fName = driver.findElement(By.id("name_basic"));
-		fName.clear();
-		fName.sendKeys(pName);
-		fName.sendKeys(Keys.ENTER);
-**/
+		 * driver.findElement(By.cssSelector("ul.listViewLinkButton_top:nth-child(4) >
+		 * li:nth-child(1) > a:nth-child(1)")) .click(); driver.switchTo();
+		 * driver.findElement(By.cssSelector("li.searchTabHandler:nth-child(1)")).click();
+		 * WebElement fName = driver.findElement(By.id("name_basic")); fName.clear();
+		 * fName.sendKeys(pName); fName.sendKeys(Keys.ENTER);
+		 **/
 		// Assess returned val
 
 		List<WebElement> meetings = driver

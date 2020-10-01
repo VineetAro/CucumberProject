@@ -39,21 +39,21 @@ formatter.match({
   "location": "SugarCrm.application_is_open_and_user_is_logged_in()"
 });
 formatter.result({
-  "duration": 20218163100,
+  "duration": 18678792500,
   "status": "passed"
 });
 formatter.match({
   "location": "SugarCrm.count_the_number_of_Dashlets()"
 });
 formatter.result({
-  "duration": 3905239800,
+  "duration": 2026939600,
   "status": "passed"
 });
 formatter.match({
   "location": "SugarCrm.close_the_CRM_browser()"
 });
 formatter.result({
-  "duration": 114981000,
+  "duration": 249125500,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -108,7 +108,7 @@ formatter.examples({
     {
       "cells": [
         "Mr.",
-        "Max",
+        "Maxx",
         "Mustermann",
         "999999"
       ],
@@ -118,7 +118,7 @@ formatter.examples({
     {
       "cells": [
         "Mrs.",
-        "Silke",
+        "Silkee",
         "Musterfrau",
         "88889"
       ],
@@ -154,7 +154,7 @@ formatter.step({
 });
 formatter.step({
   "line": 12,
-  "name": "Create new record \"Mr.\", \"Max\", \"Mustermann\", \"999999\"",
+  "name": "Create new record \"Mr.\", \"Maxx\", \"Mustermann\", \"999999\"",
   "matchedColumns": [
     0,
     1,
@@ -165,7 +165,7 @@ formatter.step({
 });
 formatter.step({
   "line": 13,
-  "name": "Verify the record \"Mr.\", \"Max\", \"Mustermann\", \"999999\"",
+  "name": "Verify the record \"Mr.\", \"Maxx\", \"Mustermann\", \"999999\"",
   "matchedColumns": [
     0,
     1,
@@ -183,14 +183,14 @@ formatter.match({
   "location": "SugarCrm.application_is_open_and_user_is_logged_in()"
 });
 formatter.result({
-  "duration": 15668663500,
+  "duration": 13387111200,
   "status": "passed"
 });
 formatter.match({
   "location": "SugarCrm.navigate_to_the_lead()"
 });
 formatter.result({
-  "duration": 1390883800,
+  "duration": 1921822200,
   "status": "passed"
 });
 formatter.match({
@@ -200,22 +200,22 @@ formatter.match({
       "offset": 19
     },
     {
-      "val": "Max",
+      "val": "Maxx",
       "offset": 26
     },
     {
       "val": "Mustermann",
-      "offset": 33
+      "offset": 34
     },
     {
       "val": "999999",
-      "offset": 47
+      "offset": 48
     }
   ],
   "location": "SugarCrm.createNewLeadRecord(String,String,String,String)"
 });
 formatter.result({
-  "duration": 4165701900,
+  "duration": 4187997100,
   "status": "passed"
 });
 formatter.match({
@@ -225,29 +225,29 @@ formatter.match({
       "offset": 19
     },
     {
-      "val": "Max",
+      "val": "Maxx",
       "offset": 26
     },
     {
       "val": "Mustermann",
-      "offset": 33
+      "offset": 34
     },
     {
       "val": "999999",
-      "offset": 47
+      "offset": 48
     }
   ],
   "location": "SugarCrm.verify_the_record(String,String,String,String)"
 });
 formatter.result({
-  "duration": 1975667700,
+  "duration": 2845885400,
   "status": "passed"
 });
 formatter.match({
   "location": "SugarCrm.close_the_CRM_browser()"
 });
 formatter.result({
-  "duration": 225101000,
+  "duration": 186450000,
   "status": "passed"
 });
 formatter.scenario({
@@ -276,7 +276,7 @@ formatter.step({
 });
 formatter.step({
   "line": 12,
-  "name": "Create new record \"Mrs.\", \"Silke\", \"Musterfrau\", \"88889\"",
+  "name": "Create new record \"Mrs.\", \"Silkee\", \"Musterfrau\", \"88889\"",
   "matchedColumns": [
     0,
     1,
@@ -287,7 +287,7 @@ formatter.step({
 });
 formatter.step({
   "line": 13,
-  "name": "Verify the record \"Mrs.\", \"Silke\", \"Musterfrau\", \"88889\"",
+  "name": "Verify the record \"Mrs.\", \"Silkee\", \"Musterfrau\", \"88889\"",
   "matchedColumns": [
     0,
     1,
@@ -305,14 +305,14 @@ formatter.match({
   "location": "SugarCrm.application_is_open_and_user_is_logged_in()"
 });
 formatter.result({
-  "duration": 14135522600,
+  "duration": 11823639400,
   "status": "passed"
 });
 formatter.match({
   "location": "SugarCrm.navigate_to_the_lead()"
 });
 formatter.result({
-  "duration": 1250859200,
+  "duration": 1662862900,
   "status": "passed"
 });
 formatter.match({
@@ -322,22 +322,22 @@ formatter.match({
       "offset": 19
     },
     {
-      "val": "Silke",
+      "val": "Silkee",
       "offset": 27
     },
     {
       "val": "Musterfrau",
-      "offset": 36
+      "offset": 37
     },
     {
       "val": "88889",
-      "offset": 50
+      "offset": 51
     }
   ],
   "location": "SugarCrm.createNewLeadRecord(String,String,String,String)"
 });
 formatter.result({
-  "duration": 4227162100,
+  "duration": 3995098200,
   "status": "passed"
 });
 formatter.match({
@@ -347,29 +347,29 @@ formatter.match({
       "offset": 19
     },
     {
-      "val": "Silke",
+      "val": "Silkee",
       "offset": 27
     },
     {
       "val": "Musterfrau",
-      "offset": 36
+      "offset": 37
     },
     {
       "val": "88889",
-      "offset": 50
+      "offset": 51
     }
   ],
   "location": "SugarCrm.verify_the_record(String,String,String,String)"
 });
 formatter.result({
-  "duration": 2408742200,
+  "duration": 1695708000,
   "status": "passed"
 });
 formatter.match({
   "location": "SugarCrm.close_the_CRM_browser()"
 });
 formatter.result({
-  "duration": 4402007200,
+  "duration": 4406808300,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -392,7 +392,7 @@ formatter.step({
 });
 formatter.step({
   "line": 25,
-  "name": "Create new meeting record \"\u003csubject\u003e\", \"\u003csDate\u003e\", \"\u003cdescription\u003e\"",
+  "name": "Create new meeting record \"\u003csubject\u003e\", \"\u003csDate\u003e\", \"\u003cdescription\u003e\", \"\u003cinvitee1\u003e\", \"\u003cinvitee2\u003e\", \"\u003cinvitee3\u003e\"",
   "keyword": "And "
 });
 formatter.step({
@@ -415,25 +415,34 @@ formatter.examples({
       "cells": [
         "subject",
         "sDate",
-        "description"
+        "description",
+        "invitee1",
+        "invitee2",
+        "invitee3"
       ],
       "line": 30,
       "id": "verify-different-functionalities-in-crm-application;schedule-a-meeting-and-invite-members;;1"
     },
     {
       "cells": [
-        "name1_10/26/2020",
-        "10/26/2020",
-        "Meeting_1"
+        "name1_10/27/2020",
+        "10/27/2020",
+        "Meeting_1",
+        "Silke",
+        "sil",
+        "Mustermann"
       ],
       "line": 31,
       "id": "verify-different-functionalities-in-crm-application;schedule-a-meeting-and-invite-members;;2"
     },
     {
       "cells": [
-        "name2_10/21/2020",
-        "10/21/2020",
-        "Meeting_2"
+        "name2_10/22/2020",
+        "10/22/2020",
+        "Meeting_2",
+        "Max",
+        "Til",
+        "Mustermann"
       ],
       "line": 32,
       "id": "verify-different-functionalities-in-crm-application;schedule-a-meeting-and-invite-members;;3"
@@ -467,17 +476,20 @@ formatter.step({
 });
 formatter.step({
   "line": 25,
-  "name": "Create new meeting record \"name1_10/26/2020\", \"10/26/2020\", \"Meeting_1\"",
+  "name": "Create new meeting record \"name1_10/27/2020\", \"10/27/2020\", \"Meeting_1\", \"Silke\", \"sil\", \"Mustermann\"",
   "matchedColumns": [
     0,
     1,
-    2
+    2,
+    3,
+    4,
+    5
   ],
   "keyword": "And "
 });
 formatter.step({
   "line": 26,
-  "name": "Verify the meeting in View meetings record \"name1_10/26/2020\", \"10/26/2020\", \"Meeting_1\"",
+  "name": "Verify the meeting in View meetings record \"name1_10/27/2020\", \"10/27/2020\", \"Meeting_1\"",
   "matchedColumns": [
     0,
     1,
@@ -494,45 +506,57 @@ formatter.match({
   "location": "SugarCrm.application_is_open_and_user_is_logged_in()"
 });
 formatter.result({
-  "duration": 20536692300,
+  "duration": 13183562300,
   "status": "passed"
 });
 formatter.match({
   "location": "SugarCrm.navigate_to_the_Activities()"
 });
 formatter.result({
-  "duration": 1215317200,
+  "duration": 1539472800,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "name1_10/26/2020",
+      "val": "name1_10/27/2020",
       "offset": 27
     },
     {
-      "val": "10/26/2020",
+      "val": "10/27/2020",
       "offset": 47
     },
     {
       "val": "Meeting_1",
       "offset": 61
+    },
+    {
+      "val": "Silke",
+      "offset": 74
+    },
+    {
+      "val": "sil",
+      "offset": 83
+    },
+    {
+      "val": "Mustermann",
+      "offset": 90
     }
   ],
-  "location": "SugarCrm.create_new_meeting_record(String,String,String)"
+  "location": "SugarCrm.create_new_meeting_record(String,String,String,String,String,String)"
 });
 formatter.result({
-  "duration": 4980274800,
+  "duration": 6439129500,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "name1_10/26/2020",
+      "val": "name1_10/27/2020",
       "offset": 44
     },
     {
-      "val": "10/26/2020",
+      "val": "10/27/2020",
       "offset": 64
     },
     {
@@ -543,14 +567,14 @@ formatter.match({
   "location": "SugarCrm.verify_the_meeting_in_View_meetings(String,String,String)"
 });
 formatter.result({
-  "duration": 31445667300,
+  "duration": 31009976300,
   "status": "passed"
 });
 formatter.match({
   "location": "SugarCrm.close_the_CRM_browser()"
 });
 formatter.result({
-  "duration": 4090339700,
+  "duration": 117658700,
   "status": "passed"
 });
 formatter.scenario({
@@ -579,17 +603,20 @@ formatter.step({
 });
 formatter.step({
   "line": 25,
-  "name": "Create new meeting record \"name2_10/21/2020\", \"10/21/2020\", \"Meeting_2\"",
+  "name": "Create new meeting record \"name2_10/22/2020\", \"10/22/2020\", \"Meeting_2\", \"Max\", \"Til\", \"Mustermann\"",
   "matchedColumns": [
     0,
     1,
-    2
+    2,
+    3,
+    4,
+    5
   ],
   "keyword": "And "
 });
 formatter.step({
   "line": 26,
-  "name": "Verify the meeting in View meetings record \"name2_10/21/2020\", \"10/21/2020\", \"Meeting_2\"",
+  "name": "Verify the meeting in View meetings record \"name2_10/22/2020\", \"10/22/2020\", \"Meeting_2\"",
   "matchedColumns": [
     0,
     1,
@@ -606,45 +633,57 @@ formatter.match({
   "location": "SugarCrm.application_is_open_and_user_is_logged_in()"
 });
 formatter.result({
-  "duration": 16045501300,
+  "duration": 13204241300,
   "status": "passed"
 });
 formatter.match({
   "location": "SugarCrm.navigate_to_the_Activities()"
 });
 formatter.result({
-  "duration": 1165003700,
+  "duration": 1440879100,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "name2_10/21/2020",
+      "val": "name2_10/22/2020",
       "offset": 27
     },
     {
-      "val": "10/21/2020",
+      "val": "10/22/2020",
       "offset": 47
     },
     {
       "val": "Meeting_2",
       "offset": 61
+    },
+    {
+      "val": "Max",
+      "offset": 74
+    },
+    {
+      "val": "Til",
+      "offset": 81
+    },
+    {
+      "val": "Mustermann",
+      "offset": 88
     }
   ],
-  "location": "SugarCrm.create_new_meeting_record(String,String,String)"
+  "location": "SugarCrm.create_new_meeting_record(String,String,String,String,String,String)"
 });
 formatter.result({
-  "duration": 4170815600,
+  "duration": 6272177100,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "name2_10/21/2020",
+      "val": "name2_10/22/2020",
       "offset": 44
     },
     {
-      "val": "10/21/2020",
+      "val": "10/22/2020",
       "offset": 64
     },
     {
@@ -655,14 +694,14 @@ formatter.match({
   "location": "SugarCrm.verify_the_meeting_in_View_meetings(String,String,String)"
 });
 formatter.result({
-  "duration": 30898201600,
+  "duration": 30911511100,
   "status": "passed"
 });
 formatter.match({
   "location": "SugarCrm.close_the_CRM_browser()"
 });
 formatter.result({
-  "duration": 4387632200,
+  "duration": 4401194700,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -787,14 +826,14 @@ formatter.match({
   "location": "SugarCrm.application_is_open_and_user_is_logged_in()"
 });
 formatter.result({
-  "duration": 14010718800,
+  "duration": 20786363100,
   "status": "passed"
 });
 formatter.match({
   "location": "SugarCrm.navigate_to_the_Products()"
 });
 formatter.result({
-  "duration": 1764226900,
+  "duration": 1256615400,
   "status": "passed"
 });
 formatter.match({
@@ -815,7 +854,7 @@ formatter.match({
   "location": "SugarCrm.create_new_Product_record(String,String,String)"
 });
 formatter.result({
-  "duration": 3399156600,
+  "duration": 4184622200,
   "status": "passed"
 });
 formatter.match({
@@ -836,14 +875,14 @@ formatter.match({
   "location": "SugarCrm.verify_the_View_products(String,String,String)"
 });
 formatter.result({
-  "duration": 1637633800,
+  "duration": 1761623300,
   "status": "passed"
 });
 formatter.match({
   "location": "SugarCrm.close_the_CRM_browser()"
 });
 formatter.result({
-  "duration": 4144889400,
+  "duration": 379467400,
   "status": "passed"
 });
 formatter.scenario({
@@ -899,14 +938,14 @@ formatter.match({
   "location": "SugarCrm.application_is_open_and_user_is_logged_in()"
 });
 formatter.result({
-  "duration": 14854216700,
+  "duration": 11028603500,
   "status": "passed"
 });
 formatter.match({
   "location": "SugarCrm.navigate_to_the_Products()"
 });
 formatter.result({
-  "duration": 1203189200,
+  "duration": 1358749500,
   "status": "passed"
 });
 formatter.match({
@@ -927,7 +966,7 @@ formatter.match({
   "location": "SugarCrm.create_new_Product_record(String,String,String)"
 });
 formatter.result({
-  "duration": 3501491100,
+  "duration": 3723281700,
   "status": "passed"
 });
 formatter.match({
@@ -948,14 +987,14 @@ formatter.match({
   "location": "SugarCrm.verify_the_View_products(String,String,String)"
 });
 formatter.result({
-  "duration": 1516330400,
+  "duration": 1752160900,
   "status": "passed"
 });
 formatter.match({
   "location": "SugarCrm.close_the_CRM_browser()"
 });
 formatter.result({
-  "duration": 325321200,
+  "duration": 230624900,
   "status": "passed"
 });
 });
