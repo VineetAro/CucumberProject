@@ -48,8 +48,13 @@ public class SugarCrm {
 		// get Count
 		Thread.sleep(2000);
 		List<WebElement> dashlet = driver.findElements(
-				By.xpath("/html/body/div[3]/div/div/div[1]/div[2]/div/div[2]/div/table/tbody/tr/td/ul/li/div"));
+				By.xpath("//*/tr/td/h3"));
 		System.out.println("Number of Dashlets are: " + dashlet.size());
+		
+		for(WebElement title : dashlet) {
+			System.out.println(title.getText());
+		}
+		
 
 	}
 
