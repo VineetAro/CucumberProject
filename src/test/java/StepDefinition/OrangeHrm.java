@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
@@ -22,7 +23,7 @@ public class OrangeHrm {
 	
 	@Given("^Open and login to the OrangeHRM Page$")
 	public void open_and_login_to_the_orange_hrm_page() {
-		driver = new ChromeDriver();
+		driver = new FirefoxDriver();
 		
 		driver.get("http://alchemy.hguy.co/orangehrm");
 		driver.manage().window().maximize();
